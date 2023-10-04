@@ -1589,7 +1589,6 @@ def test_tensorflow_reverse(
 def test_tensorflow_reverse_sequence(
     *,
     dtype_and_axis,
-    dtype,
     frontend,
     backend_fw,
     fn_tree,
@@ -1599,7 +1598,6 @@ def test_tensorflow_reverse_sequence(
     input, seq_lengths, seq_axis, batch_axis = dtype_and_axis
     helpers.test_frontend_function(
         input_sequence=input,
-        input_dtype=dtype,
         frontend=frontend,
         backend_to_test=backend_fw,
         test_flags=test_flags,
