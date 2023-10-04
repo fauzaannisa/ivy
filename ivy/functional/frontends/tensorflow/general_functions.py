@@ -381,6 +381,13 @@ def reverse(tensor, axis, name=None):
     return ivy.flip(tensor, axis=axis)
 
 
+# reverse_sequence
+def reverse_sequence(input, seq_lengths, seq_axis=None, batch_axis=None, name=None):
+    return ivy.reverse_sequence(
+        input, seq_lengths, seq_axis=seq_axis, batch_axis=batch_axis
+    )
+
+
 @to_ivy_arrays_and_back
 def roll(input, shift, axis, name=None):
     return ivy.roll(input, shift, axis=axis)
